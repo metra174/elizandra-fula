@@ -54,16 +54,16 @@ export const GALLERY_IMAGES = [
   { src: 'https://i.imgur.com/yeCPt5V.jpeg', alt: 'Elegância e Estilo' },
   
   // Fotos Profissionais (Unsplash) em Alta Definição (WebP) para compor o restante da galeria
-  { src: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=95&w=1200&fm=webp&fit=crop', alt: 'Detalhes de Costura' },
+  { src: 'https://i.imgur.com/LSmVrUG.jpeg', alt: 'Detalhes de Costura' },
   { src: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=95&w=1200&fm=webp&fit=crop', alt: 'Vestido Elegante' },
   { src: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=95&w=1200&fm=webp&fit=crop', alt: 'Noiva e Festa' },
   { src: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=95&w=1200&fm=webp&fit=crop', alt: 'Alta Costura' },
-  { src: 'https://images.unsplash.com/photo-1550614000-4b9519e07d96?q=95&w=1200&fm=webp&fit=crop', alt: 'Acabamentos Manuais' },
+  { src: 'https://i.imgur.com/ZuIshC6.jpeg', alt: 'Acabamentos Manuais' },
 
   // Espaços para novas fotos
-  { src: '', alt: 'Nova Foto 5' },
-  { src: '', alt: 'Nova Foto 6' },
-  { src: '', alt: 'Nova Foto 7' },
+  { src: '', alt: 'blob:https://imgur.com/c52ac761-efdc-46be-9244-264850b86d6b' },
+  { src: '', alt: 'https://i.imgur.com/LSmVrUG.jpeg' },
+  { src: '', alt: 'https://i.imgur.com/ZuIshC6.jpeg' },
   { src: '', alt: 'Nova Foto 8' },
   { src: '', alt: 'Nova Foto 9' },
   { src: '', alt: 'Nova Foto 10' },
