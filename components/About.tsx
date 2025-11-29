@@ -19,7 +19,7 @@ export const About: React.FC = () => {
           >
             <div className="aspect-[3/4] overflow-hidden rounded-sm shadow-xl relative z-10">
               <img 
-                src="https://www.instagram.com/p/DPhS80PkhYR/media/?size=l" 
+                src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop" 
                 alt="Elizandra trabalhando" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />

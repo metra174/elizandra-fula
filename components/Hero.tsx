@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://www.instagram.com/p/DRQb_hKDvS9/media/?size=l" 
+          src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1600&auto=format&fit=crop" 
           alt="Atelier Background" 
           className="w-full h-full object-cover"
         />
@@ -24,13 +24,13 @@ export const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-brand-dark font-sans uppercase tracking-[0.2em] text-sm md:text-base mb-4 font-bold">
+          <h2 className="text-brand-dark font-sans uppercase tracking-[0.2em] text-sm md:text-base mb-4 font-bold bg-white/30 backdrop-blur-sm inline-block px-4 py-1 rounded-sm">
             Costura Fina & Design
           </h2>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-brand-dark mb-6">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-brand-dark mb-6 drop-shadow-sm">
             Elizandra Fula
           </h1>
-          <p className="font-serif italic text-xl md:text-2xl text-brand-text/90 mb-10 max-w-2xl mx-auto">
+          <p className="font-serif italic text-xl md:text-2xl text-brand-dark/90 mb-10 max-w-2xl mx-auto font-medium">
             "Roupas da Elizandra" — Onde elegância encontra conforto em cada detalhe.
           </p>
           
@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
             <Button href={WHATSAPP_LINK} variant="primary">
               Peça via WhatsApp
             </Button>
-            <Button href="#gallery" variant="outline" className="bg-white/50 backdrop-blur-sm border-brand-dark/20 hover:border-brand-dark">
+            <Button href="#gallery" variant="outline" className="bg-white/60 backdrop-blur-sm border-brand-dark/40 hover:border-brand-dark text-brand-dark">
               Ver Coleção
             </Button>
           </div>
