@@ -35,11 +35,11 @@ export const SERVICES = [
 ];
 
 export const GALLERY_IMAGES = [
+  { src: 'https://www.instagram.com/p/DRQb_hKDvS9/media/?size=l', alt: 'Vestido de Festa Verde Lima' },
+  { src: 'https://www.instagram.com/p/DPhS80PkhYR/media/?size=l', alt: 'Produção e Detalhes' },
   { src: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop', alt: 'Vestido de Gala Elegante' },
-  { src: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=800&auto=format&fit=crop', alt: 'Vestido de Festa Verde' },
   { src: 'https://images.unsplash.com/photo-1605518216938-7f31b4747b88?q=80&w=800&auto=format&fit=crop', alt: 'Detalhes de Costura' },
   { src: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=800&auto=format&fit=crop', alt: 'Tecidos Finos e Texturas' },
-  { src: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop', alt: 'Acabamento Delicado' },
   { src: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop', alt: 'Moda Casual Chic' },
 ];
 
