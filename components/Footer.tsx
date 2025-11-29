@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_LINK } from '../constants';
+import { WHATSAPP_LINK, INSTAGRAM_LINK } from '../constants';
 import { Instagram, Facebook, Mail, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               Transformando sonhos em realidade através da moda. Atendimento personalizado para realçar sua melhor versão.
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold transition-colors"><Instagram size={18} /></a>
+              <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold transition-colors"><Instagram size={18} /></a>
               <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold transition-colors"><Facebook size={18} /></a>
             </div>
           </div>

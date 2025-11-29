@@ -1,6 +1,7 @@
 import { Scissors, Ruler, Shirt, Sparkles } from 'lucide-react';
 
 export const WHATSAPP_LINK = "https://wa.me/5500000000000"; // Replace with actual number
+export const INSTAGRAM_LINK = "https://www.instagram.com/roupas_da_elisandra_fula_?igsh=dWVxZzBsY2ZndWlh";
 
 export const NAV_LINKS = [
   { name: 'Início', href: '#home' },
@@ -34,12 +35,12 @@ export const SERVICES = [
 ];
 
 export const GALLERY_IMAGES = [
-  { src: 'https://picsum.photos/600/800?random=1', alt: 'Vestido de Gala Dourado' },
-  { src: 'https://picsum.photos/600/800?random=2', alt: 'Conjunto de Alfaiataria' },
-  { src: 'https://picsum.photos/600/800?random=3', alt: 'Vestido de Noiva Minimalista' },
-  { src: 'https://picsum.photos/600/800?random=4', alt: 'Detalhe de Costura Manual' },
-  { src: 'https://picsum.photos/600/800?random=5', alt: 'Blusa de Seda' },
-  { src: 'https://picsum.photos/600/800?random=6', alt: 'Saia Midi Estampada' },
+  { src: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop', alt: 'Vestido de Gala Elegante' },
+  { src: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=800&auto=format&fit=crop', alt: 'Vestido de Festa Verde' },
+  { src: 'https://images.unsplash.com/photo-1605518216938-7f31b4747b88?q=80&w=800&auto=format&fit=crop', alt: 'Detalhes de Costura' },
+  { src: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=800&auto=format&fit=crop', alt: 'Tecidos Finos e Texturas' },
+  { src: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop', alt: 'Acabamento Delicado' },
+  { src: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop', alt: 'Moda Casual Chic' },
 ];
 
 export const TESTIMONIALS = [

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Instagram, Facebook } from 'lucide-react';
-import { NAV_LINKS, WHATSAPP_LINK } from '../constants';
+import { NAV_LINKS, WHATSAPP_LINK, INSTAGRAM_LINK } from '../constants';
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="#" className="text-brand-dark hover:text-brand-gold transition-colors"><Instagram size={20} /></a>
+          <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" className="text-brand-dark hover:text-brand-gold transition-colors"><Instagram size={20} /></a>
           <a href="#" className="text-brand-dark hover:text-brand-gold transition-colors"><Facebook size={20} /></a>
           <a 
             href={WHATSAPP_LINK}
@@ -77,7 +77,7 @@ export const Header: React.FC = () => {
           ))}
           <div className="pt-4 border-t border-gray-100 w-full flex flex-col items-center space-y-4">
              <div className="flex space-x-6">
-                <a href="#" className="text-brand-dark"><Instagram size={24} /></a>
+                <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" className="text-brand-dark"><Instagram size={24} /></a>
                 <a href="#" className="text-brand-dark"><Facebook size={24} /></a>
              </div>
              <a href={WHATSAPP_LINK} className="bg-brand-gold text-white px-8 py-3 rounded-sm uppercase tracking-widest text-sm">

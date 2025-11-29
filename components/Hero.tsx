@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://picsum.photos/1920/1080?grayscale&blur=2" 
+          src="https://www.instagram.com/p/DRQb_hKDvS9/media/?size=l" 
           alt="Atelier Background" 
           className="w-full h-full object-cover"
         />
