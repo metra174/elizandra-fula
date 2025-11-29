@@ -3,6 +3,13 @@ import { Scissors, Ruler, Shirt, Sparkles } from 'lucide-react';
 export const WHATSAPP_LINK = "https://wa.me/5500000000000"; // Substitua pelo número real
 export const INSTAGRAM_LINK = "https://www.instagram.com/roupas_da_elisandra_fula_?igsh=dWVxZzBsY2ZndWlh";
 
+// ==================================================================================
+// CONFIGURAÇÃO DAS IMAGENS DE DESTAQUE
+// ==================================================================================
+
+export const HERO_IMAGE = "https://i.imgur.com/PsGCL0q.jpeg";
+export const ABOUT_IMAGE = "https://i.imgur.com/QEyrwTh.jpeg";
+
 export const NAV_LINKS = [
   { name: 'Início', href: '#home' },
   { name: 'Sobre', href: '#about' },
@@ -34,28 +41,37 @@ export const SERVICES = [
   },
 ];
 
-// INSTRUÇÕES PARA FOTOS:
-// O Instagram NÃO permite usar links diretos de imagens. As imagens aparecerão quebradas.
-// Use links de imagens hospedadas publicamente (ex: Unsplash, Imgur, seu próprio servidor).
-// Abaixo estão exemplos funcionais. Substitua pelos seus links reais quando tiver.
+// ==================================================================================
+// GALERIA DE FOTOS
+// ==================================================================================
 
 export const GALLERY_IMAGES = [
-  // --- Adicione suas fotos aqui ---
-  { src: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=800&auto=format&fit=crop', alt: 'Vestido de Festa Verde' },
-  { src: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop', alt: 'Detalhes de Costura' },
-  { src: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=800&auto=format&fit=crop', alt: 'Vestido Elegante' },
-  { src: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=800&auto=format&fit=crop', alt: 'Noiva e Festa' },
-  { src: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=800&auto=format&fit=crop', alt: 'Alta Costura' },
-  { src: 'https://images.unsplash.com/photo-1550614000-4b9519e07d96?q=80&w=800&auto=format&fit=crop', alt: 'Acabamentos Manuais' },
+  // Novas fotos do Imgur
+  { src: 'https://i.imgur.com/yeCPt5V.jpeg', alt: 'Criação Exclusiva' },
   
-  // Fotos extras para testar o botão "Ver Mais"
-  { src: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop', alt: 'Moda Casual' },
-  { src: 'https://images.unsplash.com/photo-1520006403909-838d6b92c22e?q=80&w=800&auto=format&fit=crop', alt: 'Criação Exclusiva' },
-  { src: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800&auto=format&fit=crop', alt: 'Vestido Floral' },
-  { src: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=800&auto=format&fit=crop', alt: 'Tecidos Finos' },
-  { src: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=800&auto=format&fit=crop', alt: 'Alfaiataria Feminina' },
-  { src: 'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=800&auto=format&fit=crop', alt: 'Modelagem Perfeita' },
-  // ... Você pode adicionar quantas fotos quiser nesta lista.
+  // Fotos anteriores (Postimages)
+  { src: 'https://i.imgur.com/yeCPt5V.jpeg', alt: 'Moda Sob Medida' },
+  { src: 'https://i.imgur.com/yeCPt5V.jpeg', alt: 'Elegância e Estilo' },
+  
+  // Fotos Profissionais (Unsplash) em Alta Definição (WebP) para compor o restante da galeria
+  { src: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=95&w=1200&fm=webp&fit=crop', alt: 'Detalhes de Costura' },
+  { src: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=95&w=1200&fm=webp&fit=crop', alt: 'Vestido Elegante' },
+  { src: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=95&w=1200&fm=webp&fit=crop', alt: 'Noiva e Festa' },
+  { src: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=95&w=1200&fm=webp&fit=crop', alt: 'Alta Costura' },
+  { src: 'https://images.unsplash.com/photo-1550614000-4b9519e07d96?q=95&w=1200&fm=webp&fit=crop', alt: 'Acabamentos Manuais' },
+
+  // Espaços para novas fotos
+  { src: '', alt: 'Nova Foto 5' },
+  { src: '', alt: 'Nova Foto 6' },
+  { src: '', alt: 'Nova Foto 7' },
+  { src: '', alt: 'Nova Foto 8' },
+  { src: '', alt: 'Nova Foto 9' },
+  { src: '', alt: 'Nova Foto 10' },
+  { src: '', alt: 'Nova Foto 11' },
+  { src: '', alt: 'Nova Foto 12' },
+  { src: '', alt: 'Nova Foto 13' },
+  { src: '', alt: 'Nova Foto 14' },
+  { src: '', alt: 'Nova Foto 15' },
 ];
 
 export const TESTIMONIALS = [

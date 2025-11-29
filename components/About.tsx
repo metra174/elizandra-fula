@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeading } from './SectionHeading';
 import { Button } from './Button';
+import { ABOUT_IMAGE } from '../constants';
 
 export const About: React.FC = () => {
   return (
@@ -17,10 +18,10 @@ export const About: React.FC = () => {
             viewport={{ once: true }}
             className="w-full md:w-1/2 relative"
           >
-            <div className="aspect-[3/4] overflow-hidden rounded-sm shadow-xl relative z-10">
+            <div className="aspect-[3/4] overflow-hidden rounded-sm shadow-xl relative z-10 border border-gray-100 max-w-[500px] mx-auto">
               <img 
-                src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop" 
-                alt="Elizandra trabalhando" 
+                src={ABOUT_IMAGE} 
+                alt="Detalhes do Ateliê Elizandra Fula" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -40,26 +41,26 @@ export const About: React.FC = () => {
               title="O Ateliê" 
               center={false} 
             />
-            <p className="text-lg text-brand-text/80 mb-6 leading-relaxed">
-              Bem-vindo ao mundo de <strong>Elizandra Fula</strong>. Nosso ateliê nasceu da paixão por transformar tecidos em arte e da vontade de realçar a beleza única de cada pessoa.
+            <p className="text-lg text-brand-text/80 mb-6 leading-relaxed font-light">
+              Bem-vindo ao mundo de <strong>Elizandra Fula</strong>. Nosso ateliê nasceu da paixão por transformar tecidos em arte e da vontade de realçar a beleza única de cada pessoa através da moda sob medida.
             </p>
-            <p className="text-lg text-brand-text/80 mb-8 leading-relaxed">
-              Aqui, cada peça conta uma história. Não fazemos apenas roupas; criamos experiências de autoestima e conforto. Seja um ajuste delicado ou a criação de um vestido dos sonhos, dedicamos atenção minuciosa a cada costura, caimento e acabamento.
+            <p className="text-lg text-brand-text/80 mb-8 leading-relaxed font-light">
+              Aqui, cada peça conta uma história. Não fazemos apenas roupas; criamos experiências de autoestima e conforto. Seja um ajuste delicado ou a criação de um vestido de gala, dedicamos atenção minuciosa a cada costura, caimento e acabamento.
             </p>
             
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-8 py-4 border-t border-gray-100">
                <div className="text-center">
-                 <span className="block font-serif text-4xl text-brand-gold">10+</span>
-                 <span className="text-sm uppercase tracking-wide text-gray-500">Anos de Experiência</span>
+                 <span className="block font-serif text-3xl text-brand-gold">Alta</span>
+                 <span className="text-xs uppercase tracking-wide text-gray-500">Qualidade</span>
                </div>
                <div className="h-10 w-px bg-gray-200"></div>
                <div className="text-center">
-                 <span className="block font-serif text-4xl text-brand-gold">500+</span>
-                 <span className="text-sm uppercase tracking-wide text-gray-500">Clientes Felizes</span>
+                 <span className="block font-serif text-3xl text-brand-gold">Design</span>
+                 <span className="text-xs uppercase tracking-wide text-gray-500">Exclusivo</span>
                </div>
             </div>
 
-            <div className="mt-10">
+            <div className="mt-8">
               <Button href="#contact" variant="text">
                 Agendar uma visita &rarr;
               </Button>
