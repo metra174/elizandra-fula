@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_LINK, INSTAGRAM_LINK } from '../constants';
+import { WHATSAPP_LINK, INSTAGRAM_LINK, FACEBOOK_LINK, CONTACT_EMAIL } from '../constants';
 import { Instagram, Facebook, Mail, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold transition-colors"><Instagram size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold transition-colors"><Facebook size={18} /></a>
+              <a href={FACEBOOK_LINK} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold transition-colors"><Facebook size={18} /></a>
             </div>
           </div>
 
@@ -37,10 +37,10 @@ export const Footer: React.FC = () => {
              <h4 className="font-sans font-bold uppercase tracking-wider mb-6 text-brand-gold text-sm">Fale Conosco</h4>
              <div className="flex flex-col items-center md:items-end space-y-3 text-gray-400">
                <a href={WHATSAPP_LINK} className="hover:text-white transition-colors flex items-center gap-2">
-                 <span className="hidden md:inline">WhatsApp</span> (00) 00000-0000
+                 <span className="hidden md:inline">WhatsApp</span> +244 936 037 927
                </a>
-               <a href="mailto:contato@elizandra.com" className="hover:text-white transition-colors flex items-center gap-2">
-                 contato@elizandra.com <Mail size={16} />
+               <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors flex items-center gap-2">
+                 {CONTACT_EMAIL} <Mail size={16} />
                </a>
                <div className="flex items-center gap-2">
                  Atendimento com Hora Marcada <MapPin size={16} />

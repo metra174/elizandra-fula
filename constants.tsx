@@ -1,7 +1,9 @@
 import { Scissors, Ruler, Shirt, Sparkles } from 'lucide-react';
 
-export const WHATSAPP_LINK = "https://wa.me/5500000000000"; // Substitua pelo número real
+export const WHATSAPP_LINK = "https://wa.me/244936037927";
 export const INSTAGRAM_LINK = "https://www.instagram.com/roupas_da_elisandra_fula_?igsh=dWVxZzBsY2ZndWlh";
+export const FACEBOOK_LINK = "https://www.facebook.com/share/1bJFgTzdP8/";
+export const CONTACT_EMAIL = "fulaelisandra@gmail.com";
 
 // ==================================================================================
 // CONFIGURAÇÃO DAS IMAGENS DE DESTAQUE

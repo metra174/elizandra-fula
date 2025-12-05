@@ -85,7 +85,7 @@ export const AppointmentSection: React.FC = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-gold focus:ring-1 focus:ring-brand-gold outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
-                    placeholder="(00) 00000-0000"
+                    placeholder="936 000 000"
                   />
                 </div>
               </div>

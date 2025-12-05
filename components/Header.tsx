@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Instagram, Facebook } from 'lucide-react';
-import { NAV_LINKS, WHATSAPP_LINK, INSTAGRAM_LINK } from '../constants';
+import { NAV_LINKS, WHATSAPP_LINK, INSTAGRAM_LINK, FACEBOOK_LINK } from '../constants';
 import { ThemeToggle } from './ThemeToggle';
 
 export const Header: React.FC = () => {
@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
         <div className="hidden md:flex items-center space-x-4">
           <ThemeToggle />
           <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" className="text-brand-dark dark:text-brand-beige hover:text-brand-gold transition-colors"><Instagram size={20} /></a>
-          <a href="#" className="text-brand-dark dark:text-brand-beige hover:text-brand-gold transition-colors"><Facebook size={20} /></a>
+          <a href={FACEBOOK_LINK} target="_blank" rel="noreferrer" className="text-brand-dark dark:text-brand-beige hover:text-brand-gold transition-colors"><Facebook size={20} /></a>
           <a 
             href="#appointment"
             className={`px-4 py-2 text-sm font-medium border border-brand-dark dark:border-brand-beige transition-all hover:bg-brand-dark hover:text-white dark:hover:bg-brand-beige dark:hover:text-brand-dark ${
@@ -85,7 +85,7 @@ export const Header: React.FC = () => {
           <div className="pt-4 border-t border-gray-100 dark:border-gray-800 w-full flex flex-col items-center space-y-4">
              <div className="flex space-x-6">
                 <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" className="text-brand-dark dark:text-brand-beige"><Instagram size={24} /></a>
-                <a href="#" className="text-brand-dark dark:text-brand-beige"><Facebook size={24} /></a>
+                <a href={FACEBOOK_LINK} target="_blank" rel="noreferrer" className="text-brand-dark dark:text-brand-beige"><Facebook size={24} /></a>
              </div>
              <a href="#appointment" onClick={() => setIsOpen(false)} className="bg-brand-gold text-white px-8 py-3 rounded-sm uppercase tracking-widest text-sm">
                Agendar Agora
