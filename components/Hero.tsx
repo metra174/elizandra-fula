@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './Button';
-import { WHATSAPP_LINK, HERO_IMAGE } from '../constants';
+import { HERO_IMAGE } from '../constants';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-brand-beige pt-20 md:pt-0 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center bg-brand-beige dark:bg-brand-charcoal transition-colors duration-300 pt-20 md:pt-0 overflow-hidden">
       <div className="container mx-auto px-4 h-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 h-full">
           
@@ -22,20 +22,20 @@ export const Hero: React.FC = () => {
               </span>
             </div>
             
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-brand-dark mb-6 leading-tight">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-brand-dark dark:text-white mb-6 leading-tight transition-colors">
               Elizandra <br/> 
               <span className="text-brand-gold italic">Fula</span>
             </h1>
             
-            <p className="font-sans text-lg md:text-xl text-brand-text/80 mb-10 max-w-lg font-light leading-relaxed">
+            <p className="font-sans text-lg md:text-xl text-brand-text/80 dark:text-gray-300 mb-10 max-w-lg font-light leading-relaxed transition-colors">
               Onde elegância encontra conforto. Peças exclusivas, feitas sob medida para realçar a sua beleza única em cada detalhe.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button href={WHATSAPP_LINK} variant="primary">
-                Peça via WhatsApp
+              <Button href="#appointment" variant="primary">
+                Agendar Horário
               </Button>
-              <Button href="#gallery" variant="outline" className="border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white">
+              <Button href="#gallery" variant="outline" className="border-brand-dark dark:border-white text-brand-dark dark:text-white hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark">
                 Ver Coleção
               </Button>
             </div>
@@ -48,7 +48,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="w-full md:w-1/2 h-[60vh] md:h-[85vh] relative"
           >
-            <div className="relative w-full h-full rounded-t-full md:rounded-none md:rounded-tl-[100px] overflow-hidden shadow-2xl border-4 border-white max-w-[500px] mx-auto">
+            <div className="relative w-full h-full rounded-t-full md:rounded-none md:rounded-tl-[100px] overflow-hidden shadow-2xl border-4 border-white dark:border-brand-dark max-w-[500px] mx-auto transition-colors">
               {/* IMAGEM PRINCIPAL - SEM ANIMAÇÃO DE ZOOM PARA MELHORAR NITIDEZ */}
               <img 
                 src={HERO_IMAGE} 

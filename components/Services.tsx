@@ -5,7 +5,7 @@ import { SERVICES } from '../constants';
 
 export const Services: React.FC = () => {
   return (
-    <section id="services" className="py-20 bg-brand-beige">
+    <section id="services" className="py-20 bg-brand-beige dark:bg-brand-charcoal transition-colors duration-300">
       <div className="container mx-auto px-4">
         <SectionHeading 
           title="Nossos Serviços" 
@@ -20,15 +20,15 @@ export const Services: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-2 border-transparent hover:border-brand-gold group"
+              className="bg-white dark:bg-brand-dark p-8 rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 border-t-2 border-transparent hover:border-brand-gold group"
             >
               <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
-              <h3 className="font-serif text-xl text-brand-dark mb-3 group-hover:text-brand-gold transition-colors">
+              <h3 className="font-serif text-xl text-brand-dark dark:text-brand-beige mb-3 group-hover:text-brand-gold transition-colors">
                 {service.title}
               </h3>
-              <p className="text-brand-text/70 leading-relaxed text-sm">
+              <p className="text-brand-text/70 dark:text-gray-400 leading-relaxed text-sm transition-colors">
                 {service.description}
               </p>
             </motion.div>

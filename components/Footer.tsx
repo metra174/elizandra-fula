@@ -4,7 +4,7 @@ import { Instagram, Facebook, Mail, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-brand-dark text-white pt-20 pb-10">
+    <footer id="contact" className="bg-brand-dark dark:bg-black text-white pt-20 pb-10 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-gray-700 pb-12 mb-12">
           
@@ -28,6 +28,7 @@ export const Footer: React.FC = () => {
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Sobre</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Serviços</a></li>
               <li><a href="#gallery" className="text-gray-400 hover:text-white transition-colors">Galeria</a></li>
+              <li><a href="#appointment" className="text-gray-400 hover:text-white transition-colors">Agendamento</a></li>
             </ul>
           </div>
 

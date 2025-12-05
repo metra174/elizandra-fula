@@ -15,7 +15,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle,
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="font-serif text-3xl md:text-4xl text-brand-dark mb-4"
+        className="font-serif text-3xl md:text-4xl text-brand-dark dark:text-brand-beige mb-4 transition-colors"
       >
         {title}
       </motion.h2>
@@ -27,7 +27,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({ title, subtitle,
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <p className="text-brand-text/80 max-w-2xl mx-auto italic font-serif text-lg">
+          <p className="text-brand-text/80 dark:text-gray-400 max-w-2xl mx-auto italic font-serif text-lg transition-colors">
             {subtitle}
           </p>
           <div className="w-16 h-0.5 bg-brand-gold mt-4"></div>

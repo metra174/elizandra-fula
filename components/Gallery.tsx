@@ -17,7 +17,7 @@ export const Gallery: React.FC = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 md:py-32 bg-white">
+    <section id="gallery" className="py-20 md:py-32 bg-white dark:bg-brand-dark transition-colors duration-300">
       <div className="container mx-auto px-4">
         <SectionHeading 
           title="Galeria de Peças" 
@@ -43,6 +43,12 @@ export const Gallery: React.FC = () => {
                   alt={img.alt} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
+                  style={{ imageRendering: 'auto' }}
+                  onError={(e) => {
+                    // Esconde a imagem se ela estiver quebrada
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.style.display = 'none';
+                  }}
                 />
                 <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
                   <ZoomIn className="text-white w-10 h-10 mb-2 opacity-80" />
@@ -58,7 +64,7 @@ export const Gallery: React.FC = () => {
         {/* Botão Ver Mais */}
         {visibleCount < validImages.length && (
           <div className="mt-12 text-center">
-            <Button onClick={showMore} variant="outline">
+            <Button onClick={showMore} variant="outline" className="dark:border-brand-beige dark:text-brand-beige dark:hover:bg-brand-beige dark:hover:text-brand-dark">
               Ver mais modelos
             </Button>
           </div>
@@ -71,7 +77,7 @@ export const Gallery: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-4"
+              className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center p-4"
               onClick={() => setSelectedImage(null)}
             >
               <button 

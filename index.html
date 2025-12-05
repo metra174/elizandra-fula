@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
@@ -20,6 +21,7 @@
                 rose: '#E8D5D5',
                 dark: '#2C2C2C',
                 text: '#4A4A4A',
+                charcoal: '#1A1A1A', // Cor de fundo para modo escuro
               }
             },
             fontFamily: {
@@ -49,7 +51,7 @@
 }
 </script>
 </head>
-  <body class="bg-brand-beige text-brand-text font-sans antialiased selection:bg-brand-gold selection:text-white">
+  <body class="bg-brand-beige dark:bg-brand-charcoal text-brand-text dark:text-brand-beige font-sans antialiased selection:bg-brand-gold selection:text-white transition-colors duration-300">
     <div id="root"></div>
     <!-- O script abaixo é essencial para carregar o React. Não remova. -->
     <script type="module" src="/index.tsx"></script>
