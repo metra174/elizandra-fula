@@ -49,11 +49,13 @@ export const Hero: React.FC = () => {
             className="w-full md:w-1/2 h-[60vh] md:h-[85vh] relative"
           >
             <div className="relative w-full h-full rounded-t-full md:rounded-none md:rounded-tl-[100px] overflow-hidden shadow-2xl border-4 border-white dark:border-brand-dark max-w-[500px] mx-auto transition-colors">
-              {/* IMAGEM PRINCIPAL - SEM ANIMAÇÃO DE ZOOM PARA MELHORAR NITIDEZ */}
+              {/* IMAGEM PRINCIPAL - CARREGAMENTO PRIORITÁRIO */}
               <img 
                 src={HERO_IMAGE} 
                 alt="Vestido Exclusivo Elizandra Fula" 
                 className="w-full h-full object-cover object-top"
+                loading="eager" // Força o carregamento imediato
+                fetchPriority="high" // Avisa o navegador que essa imagem é urgente
               />
             </div>
             

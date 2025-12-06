@@ -8,9 +8,9 @@ export const CONTACT_EMAIL = "fulaelisandra@gmail.com";
 // ==================================================================================
 // CONFIGURAÇÃO DAS IMAGENS DE DESTAQUE
 // ==================================================================================
-
-export const HERO_IMAGE = "https://i.imgur.com/PsGCL0q.jpeg";
-export const ABOUT_IMAGE = "https://i.imgur.com/QEyrwTh.jpeg";
+// Otimização Imgur: Adicionado 'h' antes do .jpeg para carregar versão otimizada (1024px) em vez da original gigante
+export const HERO_IMAGE = "https://i.imgur.com/PsGCL0qh.jpeg"; 
+export const ABOUT_IMAGE = "https://i.imgur.com/QEyrwThh.jpeg";
 
 export const NAV_LINKS = [
   { name: 'Início', href: '#home' },
@@ -48,24 +48,26 @@ export const SERVICES = [
 // ==================================================================================
 
 export const GALLERY_IMAGES = [
-  // Novas fotos do Imgur
-  { src: 'https://i.imgur.com/yeCPt5V.jpeg', alt: 'Criação Exclusiva' },
-  { src: 'https://i.imgur.com/jMKYEJS.jpeg', alt: 'Elegância e Estilo' },
+  // Novas fotos do Imgur (Otimizadas com 'h' para High Quality Thumbnail)
+  { src: 'https://i.imgur.com/yeCPt5Vh.jpeg', alt: 'Criação Exclusiva' },
+  { src: 'https://i.imgur.com/jMKYEJSh.jpeg', alt: 'Elegância e Estilo' },
   
-  // Fotos Profissionais (Unsplash) e Outras do Imgur
-  { src: 'https://i.imgur.com/LSmVrUG.jpeg', alt: 'Detalhes de Costura' },
-  { src: 'https://i.imgur.com/Z0z8ndM.jpeg', alt: 'Tecidos Finos' },
-  { src: 'https://i.imgur.com/M39M9og.jpeg', alt: 'Vestido Elegante' },
-  { src: 'https://i.imgur.com/1WfSGEP.jpeg', alt: 'Alta Costura' },
-  { src: 'https://i.imgur.com/ZuIshC6.jpeg', alt: 'Acabamentos Manuais' },
-  { src: 'https://i.imgur.com/H3huiou.jpeg', alt: 'Design Sob Medida' },
-  { src: 'https://i.imgur.com/eJtZ8zH.jpeg', alt: 'Moda Festa' },
+  // Fotos Profissionais e Outras do Imgur (Links corrigidos de imgur.com para i.imgur.com...jpeg)
+  { src: 'https://i.imgur.com/LSmVrUGh.jpeg', alt: 'Detalhes de Costura' },
+  { src: 'https://i.imgur.com/Z0z8ndMh.jpeg', alt: 'Tecidos Finos' },
+  
+  // CORREÇÃO: Links diretos adicionados abaixo
+  { src: 'https://i.imgur.com/rmNOLBDh.jpeg', alt: 'Vestido Elegante' },
+  { src: 'https://i.imgur.com/4ktUQNTh.jpeg', alt: 'Alta Costura' },
+  { src: 'https://i.imgur.com/0HcoZwRh.jpeg', alt: 'Acabamentos Manuais' },
+  { src: 'https://i.imgur.com/5ndLJlqh.jpeg', alt: 'Design Sob Medida' },
+  { src: 'https://i.imgur.com/bucYd4Zh.jpeg', alt: 'Moda Festa' },
+  { src: 'https://i.imgur.com/2rrSRsqh.jpeg', alt: 'Elegante' },
 
   // ==========================================================================
   // ÁREA DE EDIÇÃO: Cole suas novas fotos abaixo entre as aspas ''
-  // DICA: Use links diretos (terminados em .jpg ou .png) do Imgur ou Postimages
+  // DICA: Use links diretos do Imgur (i.imgur.com/...).
   // ==========================================================================
-  { src: '', alt: 'Nova Foto 1' },
   { src: '', alt: 'Nova Foto 2' },
   { src: '', alt: 'Nova Foto 3' },
   { src: '', alt: 'Nova Foto 4' },
