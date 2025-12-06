@@ -50,30 +50,26 @@ export const SERVICES = [
 export const GALLERY_IMAGES = [
   // Novas fotos do Imgur
   { src: 'https://i.imgur.com/yeCPt5V.jpeg', alt: 'Criação Exclusiva' },
+  { src: 'https://i.imgur.com/jMKYEJS.jpeg', alt: 'Elegância e Estilo' },
   
-  // Fotos anteriores (Postimages)
-  { src: 'https://i.imgur.com/yeCPt5V.jpeg', alt: 'Moda Sob Medida' },
-  { src: 'https://i.imgur.com/yeCPt5V.jpeg', alt: 'Elegância e Estilo' },
-  
-  // Fotos Profissionais (Unsplash) em Alta Definição (WebP) para compor o restante da galeria
+  // Fotos Profissionais (Unsplash) e Outras do Imgur
   { src: 'https://i.imgur.com/LSmVrUG.jpeg', alt: 'Detalhes de Costura' },
-  { src: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=95&w=1200&fm=webp&fit=crop', alt: 'Vestido Elegante' },
-  { src: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=95&w=1200&fm=webp&fit=crop', alt: 'Noiva e Festa' },
-  { src: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=95&w=1200&fm=webp&fit=crop', alt: 'Alta Costura' },
+  { src: 'https://i.imgur.com/Z0z8ndM.jpeg', alt: 'Tecidos Finos' },
+  { src: 'https://i.imgur.com/M39M9og.jpeg', alt: 'Vestido Elegante' },
+  { src: 'https://i.imgur.com/1WfSGEP.jpeg', alt: 'Alta Costura' },
   { src: 'https://i.imgur.com/ZuIshC6.jpeg', alt: 'Acabamentos Manuais' },
+  { src: 'https://i.imgur.com/H3huiou.jpeg', alt: 'Design Sob Medida' },
+  { src: 'https://i.imgur.com/eJtZ8zH.jpeg', alt: 'Moda Festa' },
 
-  // Espaços para novas fotos
-  { src: '', alt: 'blob:https://imgur.com/c52ac761-efdc-46be-9244-264850b86d6b' },
-  { src: '', alt: 'https://i.imgur.com/LSmVrUG.jpeg' },
-  { src: '', alt: 'https://i.imgur.com/ZuIshC6.jpeg' },
-  { src: '', alt: 'Nova Foto 8' },
-  { src: '', alt: 'Nova Foto 9' },
-  { src: '', alt: 'Nova Foto 10' },
-  { src: '', alt: 'Nova Foto 11' },
-  { src: '', alt: 'Nova Foto 12' },
-  { src: '', alt: 'Nova Foto 13' },
-  { src: '', alt: 'Nova Foto 14' },
-  { src: '', alt: 'Nova Foto 15' },
+  // ==========================================================================
+  // ÁREA DE EDIÇÃO: Cole suas novas fotos abaixo entre as aspas ''
+  // DICA: Use links diretos (terminados em .jpg ou .png) do Imgur ou Postimages
+  // ==========================================================================
+  { src: '', alt: 'Nova Foto 1' },
+  { src: '', alt: 'Nova Foto 2' },
+  { src: '', alt: 'Nova Foto 3' },
+  { src: '', alt: 'Nova Foto 4' },
+  { src: '', alt: 'Nova Foto 5' },
 ];
 
 export const TESTIMONIALS = [
