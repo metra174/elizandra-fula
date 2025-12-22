@@ -19,23 +19,46 @@
                 beige: '#F5F5F0',
                 gold: '#C5A059',
                 rose: '#E8D5D5',
+                wine: '#722F37', // Cor de Natal sofisticada
                 dark: '#2C2C2C',
                 text: '#4A4A4A',
-                charcoal: '#1A1A1A', // Cor de fundo para modo escuro
+                charcoal: '#1A1A1A',
               }
             },
             fontFamily: {
               serif: ['"Playfair Display"', 'serif'],
               sans: ['"Lato"', 'sans-serif'],
+            },
+            animation: {
+              'snow': 'snow 10s linear infinite',
+              'twinkle': 'twinkle 2s ease-in-out infinite',
+            },
+            keyframes: {
+              snow: {
+                '0%': { transform: 'translateY(-10px) translateX(0)', opacity: '0' },
+                '10%': { opacity: '0.8' },
+                '90%': { opacity: '0.8' },
+                '100%': { transform: 'translateY(100vh) translateX(20px)', opacity: '0' },
+              },
+              twinkle: {
+                '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+                '50%': { opacity: '1', transform: 'scale(1.1)' },
+              }
             }
           }
         }
       }
     </script>
     <style>
-      /* Smooth scroll behavior */
       html {
         scroll-behavior: smooth;
+      }
+      .snowflake {
+        position: absolute;
+        top: -10%;
+        color: white;
+        pointer-events: none;
+        z-index: 1;
       }
     </style>
   <script type="importmap">
@@ -53,7 +76,6 @@
 </head>
   <body class="bg-brand-beige dark:bg-brand-charcoal text-brand-text dark:text-brand-beige font-sans antialiased selection:bg-brand-gold selection:text-white transition-colors duration-300">
     <div id="root"></div>
-    <!-- O script abaixo é essencial para carregar o React. Não remova. -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeading } from './SectionHeading';
 import { Button } from './Button';
-import { Calendar, Clock, Mail, MessageSquare, Phone, User } from 'lucide-react';
+import { Calendar, Clock, Mail, MessageSquare, Phone, User, Gift } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants';
 
 export const AppointmentSection: React.FC = () => {
@@ -22,24 +22,19 @@ export const AppointmentSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Formatar data para exibição amigável
     const dateObj = new Date(formData.date);
     const dateStr = dateObj.toLocaleDateString('pt-BR');
     const timeStr = dateObj.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
 
-    // Construir mensagem do WhatsApp
-    const message = `Olá, Elizandra! Gostaria de agendar um horário.
+    const message = `Olá, Elizandra! Gostaria de agendar um horário para o meu look de festas.
     
 *Nome:* ${formData.name}
 *Email:* ${formData.email}
 *Telefone:* ${formData.phone}
 *Data Desejada:* ${dateStr} às ${timeStr}
-*Descrição do Pedido:* ${formData.description}`;
+*Serviço Desejado:* ${formData.description}`;
 
-    // Codificar URL e abrir
     const encodedMessage = encodeURIComponent(message);
-    // Extrair apenas o número do link base se necessário, aqui assumimos que WHATSAPP_LINK é a base wa.me
-    // Se WHATSAPP_LINK for "https://wa.me/55...", vamos usar ele direto com o parametro text
     const finalLink = `${WHATSAPP_LINK}?text=${encodedMessage}`;
     
     window.open(finalLink, '_blank');
@@ -49,25 +44,31 @@ export const AppointmentSection: React.FC = () => {
     <section id="appointment" className="py-20 bg-white dark:bg-brand-charcoal transition-colors duration-300">
       <div className="container mx-auto px-4">
         <SectionHeading 
-          title="Agende seu Horário" 
-          subtitle="Preencha o formulário abaixo para solicitar um atendimento personalizado." 
+          title="Garanta seu Look de Festas" 
+          subtitle="A agenda de Natal e Réveillon costuma lotar rápido. Reserve seu horário para atendimento personalizado." 
         />
 
-        <div className="max-w-3xl mx-auto bg-brand-beige dark:bg-brand-dark/50 p-8 md:p-12 rounded-sm shadow-lg border border-brand-gold/20">
+        <div className="max-w-3xl mx-auto bg-brand-beige dark:bg-brand-dark/50 p-8 md:p-12 rounded-sm shadow-lg border border-brand-wine/20">
+          <div className="flex items-center justify-center gap-2 mb-8 text-brand-wine dark:text-brand-rose">
+            <Gift size={20} />
+            <span className="text-sm font-bold uppercase tracking-widest">Atendimento com Hora Marcada</span>
+            <Gift size={20} />
+          </div>
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Nome */}
               <div className="relative">
                 <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Nome Completo</label>
                 <div className="relative">
-                  <User className="absolute left-3 top-3 text-brand-gold w-5 h-5" />
+                  <User className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
                   <input
                     required
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-gold focus:ring-1 focus:ring-brand-gold outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
                     placeholder="Seu nome"
                   />
                 </div>
@@ -77,14 +78,14 @@ export const AppointmentSection: React.FC = () => {
               <div className="relative">
                 <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Telefone / WhatsApp</label>
                 <div className="relative">
-                  <Phone className="absolute left-3 top-3 text-brand-gold w-5 h-5" />
+                  <Phone className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
                   <input
                     required
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-gold focus:ring-1 focus:ring-brand-gold outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
                     placeholder="936 000 000"
                   />
                 </div>
@@ -94,13 +95,13 @@ export const AppointmentSection: React.FC = () => {
               <div className="relative">
                 <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Email</label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-3 text-brand-gold w-5 h-5" />
+                  <Mail className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-gold focus:ring-1 focus:ring-brand-gold outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -108,16 +109,16 @@ export const AppointmentSection: React.FC = () => {
 
               {/* Data e Hora */}
               <div className="relative">
-                <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Data e Hora Preferida</label>
+                <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Data Preferida para Prova</label>
                 <div className="relative">
-                  <Calendar className="absolute left-3 top-3 text-brand-gold w-5 h-5" />
+                  <Calendar className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
                   <input
                     required
                     type="datetime-local"
                     name="date"
                     value={formData.date}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-gold focus:ring-1 focus:ring-brand-gold outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors [color-scheme:light] dark:[color-scheme:dark]"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors [color-scheme:light] dark:[color-scheme:dark]"
                   />
                 </div>
               </div>
@@ -125,27 +126,27 @@ export const AppointmentSection: React.FC = () => {
 
             {/* Descrição */}
             <div className="relative">
-              <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Como podemos ajudar?</label>
+              <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Qual o evento ou serviço desejado?</label>
               <div className="relative">
-                <MessageSquare className="absolute left-3 top-3 text-brand-gold w-5 h-5" />
+                <MessageSquare className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
                 <textarea
                   required
                   name="description"
                   value={formData.description}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-gold focus:ring-1 focus:ring-brand-gold outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors resize-none"
-                  placeholder="Descreva o tipo de roupa, ajuste ou serviço que você deseja..."
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors resize-none"
+                  placeholder="Ex: Vestido para Ceia de Natal, Saia para Réveillon, Ajuste em peça de gala..."
                 />
               </div>
             </div>
 
             <div className="text-center pt-4">
-              <Button type="submit" variant="primary" className="w-full md:w-auto min-w-[250px]">
-                Confirmar Agendamento
+              <Button type="submit" variant="primary" className="w-full md:w-auto min-w-[250px] bg-brand-wine hover:bg-red-900 border-none">
+                Solicitar Agendamento Natalino
               </Button>
               <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-                Ao clicar, você será redirecionado para o WhatsApp com os dados preenchidos para finalizar o agendamento.
+                Celebre com estilo. Entraremos em contato via WhatsApp para confirmar a disponibilidade.
               </p>
             </div>
           </form>
