@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeading } from './SectionHeading';
 import { Button } from './Button';
-import { Calendar, Clock, Mail, MessageSquare, Phone, User, Gift } from 'lucide-react';
+import { Calendar, Mail, MessageSquare, Phone, User, Scissors } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants';
 
 export const AppointmentSection: React.FC = () => {
@@ -26,13 +26,13 @@ export const AppointmentSection: React.FC = () => {
     const dateStr = dateObj.toLocaleDateString('pt-BR');
     const timeStr = dateObj.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
 
-    const message = `Olá, Elizandra! Gostaria de agendar um horário para o meu look de festas.
+    const message = `Olá, Elizandra! Gostaria de agendar uma consultoria no ateliê.
     
 *Nome:* ${formData.name}
 *Email:* ${formData.email}
 *Telefone:* ${formData.phone}
 *Data Desejada:* ${dateStr} às ${timeStr}
-*Serviço Desejado:* ${formData.description}`;
+*Serviço/Evento:* ${formData.description}`;
 
     const encodedMessage = encodeURIComponent(message);
     const finalLink = `${WHATSAPP_LINK}?text=${encodedMessage}`;
@@ -41,112 +41,113 @@ export const AppointmentSection: React.FC = () => {
   };
 
   return (
-    <section id="appointment" className="py-20 bg-white dark:bg-brand-charcoal transition-colors duration-300">
+    <section id="appointment" className="py-24 bg-white dark:bg-brand-charcoal transition-colors duration-500">
       <div className="container mx-auto px-4">
         <SectionHeading 
-          title="Garanta seu Look de Festas" 
-          subtitle="A agenda de Natal e Réveillon costuma lotar rápido. Reserve seu horário para atendimento personalizado." 
+          title="Agende sua Consultoria" 
+          subtitle="Para um atendimento exclusivo e personalizado, reserve seu horário em nosso ateliê." 
         />
 
-        <div className="max-w-3xl mx-auto bg-brand-beige dark:bg-brand-dark/50 p-8 md:p-12 rounded-sm shadow-lg border border-brand-wine/20">
-          <div className="flex items-center justify-center gap-2 mb-8 text-brand-wine dark:text-brand-rose">
-            <Gift size={20} />
-            <span className="text-sm font-bold uppercase tracking-widest">Atendimento com Hora Marcada</span>
-            <Gift size={20} />
+        <div className="max-w-4xl mx-auto bg-brand-beige dark:bg-brand-dark/30 p-8 md:p-16 rounded-sm shadow-2xl border border-brand-gold/10">
+          <div className="flex items-center justify-center gap-4 mb-12 text-brand-gold">
+            <div className="h-px w-12 bg-brand-gold/30"></div>
+            <Scissors size={24} className="animate-pulse" />
+            <span className="text-xs font-bold uppercase tracking-[0.3em]">Atendimento Private</span>
+            <div className="h-px w-12 bg-brand-gold/30"></div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Nome */}
-              <div className="relative">
-                <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Nome Completo</label>
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/60 dark:text-brand-gold">Nome Completo</label>
                 <div className="relative">
-                  <User className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
+                  <User className="absolute left-0 top-1/2 -translate-y-1/2 text-brand-gold w-5 h-5" />
                   <input
                     required
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
+                    className="w-full pl-8 pr-4 py-3 border-b border-gray-300 dark:border-gray-700 bg-transparent focus:border-brand-gold outline-none text-brand-dark dark:text-white transition-all"
                     placeholder="Seu nome"
                   />
                 </div>
               </div>
 
               {/* Telefone */}
-              <div className="relative">
-                <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Telefone / WhatsApp</label>
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/60 dark:text-brand-gold">WhatsApp</label>
                 <div className="relative">
-                  <Phone className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
+                  <Phone className="absolute left-0 top-1/2 -translate-y-1/2 text-brand-gold w-5 h-5" />
                   <input
                     required
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
+                    className="w-full pl-8 pr-4 py-3 border-b border-gray-300 dark:border-gray-700 bg-transparent focus:border-brand-gold outline-none text-brand-dark dark:text-white transition-all"
                     placeholder="936 000 000"
                   />
                 </div>
               </div>
 
               {/* Email */}
-              <div className="relative">
-                <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Email</label>
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/60 dark:text-brand-gold">Email</label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
+                  <Mail className="absolute left-0 top-1/2 -translate-y-1/2 text-brand-gold w-5 h-5" />
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors"
-                    placeholder="seu@email.com"
+                    className="w-full pl-8 pr-4 py-3 border-b border-gray-300 dark:border-gray-700 bg-transparent focus:border-brand-gold outline-none text-brand-dark dark:text-white transition-all"
+                    placeholder="exemplo@email.com"
                   />
                 </div>
               </div>
 
               {/* Data e Hora */}
-              <div className="relative">
-                <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Data Preferida para Prova</label>
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/60 dark:text-brand-gold">Data e Horário</label>
                 <div className="relative">
-                  <Calendar className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
+                  <Calendar className="absolute left-0 top-1/2 -translate-y-1/2 text-brand-gold w-5 h-5" />
                   <input
                     required
                     type="datetime-local"
                     name="date"
                     value={formData.date}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors [color-scheme:light] dark:[color-scheme:dark]"
+                    className="w-full pl-8 pr-4 py-3 border-b border-gray-300 dark:border-gray-700 bg-transparent focus:border-brand-gold outline-none text-brand-dark dark:text-white transition-all [color-scheme:light] dark:[color-scheme:dark]"
                   />
                 </div>
               </div>
             </div>
 
             {/* Descrição */}
-            <div className="relative">
-              <label className="block text-sm font-medium text-brand-dark dark:text-brand-beige mb-1">Qual o evento ou serviço desejado?</label>
+            <div className="space-y-2">
+              <label className="text-xs uppercase tracking-widest font-bold text-brand-dark/60 dark:text-brand-gold">Qual o tipo de evento ou peça desejada?</label>
               <div className="relative">
-                <MessageSquare className="absolute left-3 top-3 text-brand-wine w-5 h-5" />
+                <MessageSquare className="absolute left-0 top-4 text-brand-gold w-5 h-5" />
                 <textarea
                   required
                   name="description"
                   value={formData.description}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-sm focus:border-brand-wine focus:ring-1 focus:ring-brand-wine outline-none bg-white dark:bg-brand-charcoal text-brand-dark dark:text-white transition-colors resize-none"
-                  placeholder="Ex: Vestido para Ceia de Natal, Saia para Réveillon, Ajuste em peça de gala..."
+                  className="w-full pl-8 pr-4 py-3 border-b border-gray-300 dark:border-gray-700 bg-transparent focus:border-brand-gold outline-none text-brand-dark dark:text-white transition-all resize-none"
+                  placeholder="Ex: Vestido de noiva, terno feminino para conferência, traje de gala..."
                 />
               </div>
             </div>
 
-            <div className="text-center pt-4">
-              <Button type="submit" variant="primary" className="w-full md:w-auto min-w-[250px] bg-brand-wine hover:bg-red-900 border-none">
-                Solicitar Agendamento Natalino
+            <div className="text-center pt-8">
+              <Button type="submit" variant="primary" className="w-full md:w-auto min-w-[300px] text-lg py-4">
+                Confirmar Disponibilidade
               </Button>
-              <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-                Celebre com estilo. Entraremos em contato via WhatsApp para confirmar a disponibilidade.
+              <p className="mt-6 text-[10px] uppercase tracking-widest text-gray-500 dark:text-gray-400">
+                Retornaremos em até 24 horas úteis via WhatsApp.
               </p>
             </div>
           </form>

@@ -14,12 +14,12 @@ export const Button: React.FC<ButtonProps> = ({
   className = '', 
   ...props 
 }) => {
-  const baseStyles = "inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-all duration-300 rounded-sm tracking-wide uppercase";
+  const baseStyles = "inline-flex items-center justify-center px-8 py-4 text-sm font-bold transition-all duration-500 rounded-sm tracking-[0.2em] uppercase";
   
   const variants = {
-    primary: "bg-brand-gold text-white hover:bg-yellow-600 shadow-md hover:shadow-lg",
-    outline: "border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white",
-    text: "text-brand-dark hover:text-brand-gold underline-offset-4 hover:underline",
+    primary: "bg-brand-dark dark:bg-brand-gold text-white dark:text-brand-dark hover:shadow-[0_0_30px_rgba(197,160,89,0.3)] hover:-translate-y-1 active:translate-y-0",
+    outline: "border border-brand-dark/20 dark:border-brand-gold/30 text-brand-dark dark:text-brand-gold hover:border-brand-dark dark:hover:border-brand-gold hover:bg-brand-dark dark:hover:bg-brand-gold hover:text-white dark:hover:text-brand-dark",
+    text: "text-brand-dark dark:text-brand-beige hover:text-brand-gold dark:hover:text-brand-gold underline-offset-8 hover:underline decoration-brand-gold",
   };
 
   const combinedStyles = `${baseStyles} ${variants[variant]} ${className}`;

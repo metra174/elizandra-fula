@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="https://picsum.photos/32/32" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elizandra Fula - Atelier</title>
+    <title>Elizandra Fula - Atelier de Alta Costura</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +16,12 @@
           extend: {
             colors: {
               brand: {
-                beige: '#F5F5F0',
+                beige: '#F9F9F7',
                 gold: '#C5A059',
-                rose: '#E8D5D5',
-                wine: '#722F37', // Cor de Natal sofisticada
-                dark: '#2C2C2C',
-                text: '#4A4A4A',
-                charcoal: '#1A1A1A',
+                goldLight: '#E5C687',
+                dark: '#1A1A1A',
+                text: '#333333',
+                charcoal: '#0F0F0F',
               }
             },
             fontFamily: {
@@ -30,19 +29,17 @@
               sans: ['"Lato"', 'sans-serif'],
             },
             animation: {
-              'snow': 'snow 10s linear infinite',
-              'twinkle': 'twinkle 2s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'shimmer': 'shimmer 3s infinite linear',
             },
             keyframes: {
-              snow: {
-                '0%': { transform: 'translateY(-10px) translateX(0)', opacity: '0' },
-                '10%': { opacity: '0.8' },
-                '90%': { opacity: '0.8' },
-                '100%': { transform: 'translateY(100vh) translateX(20px)', opacity: '0' },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
               },
-              twinkle: {
-                '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
-                '50%': { opacity: '1', transform: 'scale(1.1)' },
+              shimmer: {
+                '0%': { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition: '200% 0' },
               }
             }
           }
@@ -53,12 +50,12 @@
       html {
         scroll-behavior: smooth;
       }
-      .snowflake {
-        position: absolute;
-        top: -10%;
-        color: white;
-        pointer-events: none;
-        z-index: 1;
+      .shimmer-text {
+        background: linear-gradient(90deg, #C5A059 0%, #F9F9F7 50%, #C5A059 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 5s infinite linear;
       }
     </style>
   <script type="importmap">
